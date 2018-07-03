@@ -1,0 +1,6 @@
+chars=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890123456789012345678901234567890
+max=$((15 + RANDOM % 15))
+for i in $(seq 10 $max) ; do
+    echo -n ${chars:RANDOM%${#chars}:1}
+done
+echo
